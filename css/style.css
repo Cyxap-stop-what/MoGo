@@ -42,6 +42,29 @@ header {
 .menu a {
     color:#95e1d3;
     text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    position: relative;
+}
+
+.menu a:hover {
+    color: #F38181;
+}
+
+.menu a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #F38181;
+    transition: .5s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+    transform: translate(-50%);
 }
 
 .logo {
@@ -96,7 +119,7 @@ main {
 
 .section-title div p {
     margin-top: 45px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 hr {
@@ -111,6 +134,11 @@ hr {
     margin-right: 30px;
     text-align: center;
 }
+
+.team-member h3{
+    margin-top: 30px;
+}
+
 
 .members {
     display: flex;
@@ -134,4 +162,31 @@ footer {
     color: white;
     background-color: #95e1d3;
     font-family: "Montserrat", sans-serif;
+}
+
+.team-member {
+    width: 33%;
+}
+
+.team-member img {
+    width: 100%;
+} 
+ 
+.team-member:first-child {
+    margin-left: 0;
+} 
+
+.member-photo {
+    position: relative;
+}
+
+.member-photo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    bottom: 16px;
+    right: 10px;
+    left: -10px;
+    background: linear-gradient(180deg, rgba(239, 139, 138, 0.8) 0%, rgba(229, 207, 130, 0.8) 100%);
 }
