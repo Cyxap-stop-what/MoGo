@@ -182,11 +182,41 @@ footer {
 
 .member-photo::before {
     content: '';
-    display: block;
     position: absolute;
     top: -10px;
     bottom: 16px;
     right: 10px;
     left: -10px;
     background: linear-gradient(180deg, rgba(239, 139, 138, 0.8) 0%, rgba(229, 207, 130, 0.8) 100%);
+    transition: .3s;
+    opacity: 0;
+}
+
+.member-photo:hover::before {
+    display: block;
+    opacity: 1;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    position: absolute;
+}
+
+.social li {
+    width: 57px;
+    height: 57px;
+    background: #fce38a;
+}
+
+.social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.social img {
+    height: 26px;
 }
