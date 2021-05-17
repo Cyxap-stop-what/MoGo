@@ -152,6 +152,7 @@ h3 {
 footer {
     width: 1200px;
     padding-top: 110px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -171,7 +172,7 @@ footer {
 .team-member img {
     width: 100%;
 } 
- 
+
 .team-member:first-child {
     margin-left: 0;
 } 
@@ -188,12 +189,12 @@ footer {
     right: 10px;
     left: -10px;
     background: linear-gradient(180deg, rgba(239, 139, 138, 0.8) 0%, rgba(229, 207, 130, 0.8) 100%);
-    transition: .3s;
+    transition: .7s;
     opacity: 0;
 }
 
-.member-photo:hover::before {
-    display: block;
+.member-photo:hover::before,
+.member-photo:hover .social {
     opacity: 1;
 }
 
@@ -202,15 +203,20 @@ footer {
     display: flex;
     padding-left: 0;
     position: absolute;
+    top: calc(50% -28.5px);
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
 }
 
 .social li {
     width: 57px;
     height: 57px;
     background: #fce38a;
+    margin-left: 1px;
 }
 
-.social a{
+.social a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,3 +226,14 @@ footer {
 .social img {
     height: 26px;
 }
+
+.social li :hover {
+    background: rgba(149, 225, 211, 1);
+    transition: 0.9s;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
